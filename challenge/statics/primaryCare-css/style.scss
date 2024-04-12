@@ -1,0 +1,1531 @@
+// ********** these css codes are for home page(index), primary-care page, and urgent-care page
+// ********** they all share the same styles for navigation bar and footer
+@import url(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root{
+    --background: #ED215E;
+    --primary_color: #ED215E;
+    --secondaryColor: #969696;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    padding-inline: 8%;
+}
+.nav-active{
+    
+    background: rgb(255, 255, 255);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.416);
+    transition: .5s ease-in-out;
+}
+
+// ************************home page styles********************************************
+.headersection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../imgs/home-imgs/herobg-img.png);
+    background-size: cover;
+    background-position: center;
+    .primary-header{  
+        align-self: flex-start;
+        position: fixed;
+        z-index: 1000;   
+        padding: 0;
+        width: 100%;
+        .contacts{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 8%;
+            background: white;
+            border: 1px solid #F1F1F1;
+            
+
+
+
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                li{
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+
+                    a{
+                        text-decoration: none;
+                        color: #191825BF;
+                    }
+
+                }
+            }
+            .menu_bar{
+                display: none;
+                border: 1px solid #969696;
+                border-radius: 50%;  
+                padding: 3px;              
+            }
+        }
+    }
+    nav{
+        width: 100%;
+        padding-inline: 8%;
+        margin: 0;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: var(--background);
+
+        ul{ 
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 30px;
+            li{
+                list-style: none;
+
+                a{
+                    text-decoration: none;
+                    color: rgb(252, 251, 251);
+                    font-size: 18px;
+                }
+                a:active{
+                    color: var(--primary_color);
+                }
+            }
+        }
+
+    }
+    .hero-contents{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    p{
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        color: white;
+
+        span{
+            color: #ED215E;
+        }
+    }
+
+    .btns{
+        button{
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #ED215E;
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+        }
+        button:nth-child(2){
+            background: white;
+            color: #ED215E;
+            
+
+        }
+
+    }
+
+
+
+    }
+}
+
+
+// services section styles
+
+.services{
+    padding-block: 30px;
+
+    .servces-contents{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+
+        h2{
+            color: #ED215E;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 56px;
+            text-align: center;
+            margin-bottom: 30px;
+    
+        }
+        .urgent-care{
+            display: flex;
+            gap: 40px;
+
+            .contents{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                h3{
+                    font-size: 40px;
+                    font-weight: 400px;
+                    line-height: 48px;
+
+                }
+
+                p{
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: #717171;
+                }
+                p:nth-child(3){
+                    color: black;
+                    position: relative;
+                }
+                p:nth-child(3)::before{
+                    content: "";
+                    width: 3px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    background-color: #ED215E;
+                    
+                }
+            }
+            
+        }
+
+    }
+
+    .Primary-care{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        .contents{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h3{
+                font-size: 40px;
+                font-weight: 400;
+                line-height: 48px;
+            }
+            p{
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
+                color: #717171;
+            }
+            .content2{
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+
+                p{
+                    color: black;
+                }
+                .p2{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    gap: 10px;
+
+       
+                }
+            }
+        }
+    }
+   
+    .Occupational{
+        display: flex;
+        align-items: center;
+        // gap: 30px;
+
+        .contents{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-left: 50px;
+
+            .intro{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+    
+                h3{
+                    font-size: 40px;
+                    font-weight: 400;
+                    line-height: 48px;
+                }
+                p{
+                    color: #717171;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li{
+                    list-style: none;
+                    display: flex;
+                    gap: 5px;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+    
+
+}
+
+// our-facilities section styles starts here
+
+.home-facilities{
+    padding-block: 30px;
+
+    .contents{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        h2{
+            text-align: center;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 58px;
+            color: #ED215E;
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            .card{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .location{
+                    h3{
+                        font-size: 20;
+                        font-weight: 500;
+                        line-height: 24px;
+
+                    }
+                    span{
+                        color: #717171;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    width: fit-content;
+                    padding: 12px 32px;
+                    color: #ED215E;
+                    border: 1px solid #ED215E;
+                    border-radius: 8px;
+                }
+            }
+        }
+
+    }
+}
+
+.testmonials{
+    padding-block: 30px;
+    background: #ED215E;
+    color: white;
+
+    h2{
+        text-align: center;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 56px;
+        color: white;
+    }
+    .inner-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .testmonies{
+            display: flex;
+            gap: 20px;
+
+            .testmony{
+                display: flex;
+                
+                gap: 10px;
+                p{
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+                img{
+                    width: 40px;
+                    height: 43px;
+                    align-self: flex-start;
+                
+
+                }
+            }
+
+        }
+        .testmonies > *{
+            flex: 1;
+        }
+        .testmony-outer{
+            display: flex;
+            width: 50%;
+            img{
+                width: 40px;
+                height: 43px;
+               
+            }
+        }
+        
+
+    }
+}
+
+// partners section starts
+
+.partners{
+    height: 50vh;
+    padding-block: 30px;
+
+    .inner-container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        a{
+            text-decoration: none;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #ED215E;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+  
+        }
+        
+
+    }
+}
+
+
+// **********************primary care styles*******************************************
+.hero,.our-facilities,.services,.insurence,.partners{
+    width: 100%;
+}
+
+// header section starts
+.hero{
+    padding-inline: 0;
+    height: 100vh;
+    nav{
+        padding-inline: 8%;
+        z-index: 999;
+        position: fixed;
+        width: inherit;
+        max-width: inherit;
+        top: 0;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        background: white;
+        gap: 20px;
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            li{
+                list-style: none;
+                position: relative;
+
+                a{
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: black; 
+                    transition: .5s;                   
+                }
+                a:hover{
+                    color: #ED215E;
+                }
+            }
+        }
+        .menu_bar{
+            display: none;
+            cursor: pointer;
+            border: 1px solid #969696;
+            border-radius: 50%;  
+            padding: 3px;   
+        }
+    }
+    .nav-active{
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.416);
+        transition: .5s ease-in-out;
+    }
+
+
+    // hero contents starts
+
+    .contents{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .block-content1{
+            .imgs{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+            }
+            p{
+                margin-block: 20px;
+            }
+            .centered{
+                text-align: center;
+            }
+        }
+        .heroBtns{
+            display: flex;
+            gap: 10px;
+            button{
+                padding: 10px 25px;
+                border-radius: 8px;
+                border: none;
+            }
+            .btn1{
+                color: white;
+                background-color: var(--background);
+            }
+            .btn2{
+                border: 2px solid var(--primary_color);
+                color: var(--primary_color);
+            }
+        }
+    }
+}
+
+// facilities section styles starts here
+
+.our-facilities{
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    padding: 0;
+
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding-inline: 25px;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 30px;
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+            img{
+                width: 100%;
+                height: 170px;                
+            }
+            .btn{
+                width: fit-content;
+                padding: 8px 32px;
+                border: var(--primary_color);
+                color: var(--primary_color);
+                border: 2px solid #ED215E;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+    // services section styles 
+
+    .services{
+        padding-block: 80px;
+        .servicesList{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            h2{
+                color: var(--primary_color);
+            }
+
+
+            .cards{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                
+                .card{
+                    padding: 15px;
+                    border: 2px solid #dddcdc;
+                }
+    
+            }
+
+        }
+
+    }
+
+    // insurence section styles
+
+    .insurence{
+        padding-block: 40px;
+
+        .contents{
+            display: flex;
+            align-items: center;
+            .content{
+                h2{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .contents > *{
+            flex: 1;
+        }
+    }
+
+    // partners section styles
+
+    .partners{
+        padding-block: 60px;
+
+        .contents{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 20px;
+
+            .texts{
+                h2{
+                    font-size: 2.9em;
+                    font-weight: 400;
+                    color: var(--primary_color);
+                }
+                p{
+                    font-size: 18px;
+
+                    img{
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+
+            a{
+                background: var(--background);
+                padding: 16px 32px;
+                border-radius: 8px;
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    // footer section starts
+    footer{
+        padding-block: 30px;
+        .contents{
+
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            gap: 30px;
+
+            .card1{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                img{
+                    width: 216px;
+                    height: 60px;
+                }
+
+                p{
+                    color: var(--secondaryColor);
+                }
+            }
+
+            .holderCards{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);  
+                gap: 20px;   
+                
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    ul li{
+                        list-style: none;
+                        color: var(--secondaryColor);
+
+                        a{
+                            text-decoration: none;
+                            color: var(--secondaryColor);
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    // ****************************************new page styles: urgent-care ***************************
+    .visit-us{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding-block: 30px;
+        h2{
+            color: var(--primary_color);
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 56px;
+
+        }
+
+        .content-box{
+            width: 100%;
+            display: flex;
+            align-items: center;  
+                          
+
+            img{
+                width: 40%;
+                border-radius: 0 88px 0 88px;
+            }           
+            
+            .content{
+                margin-left: 50px;
+                width: 60%;
+                position: relative;      
+
+                h3{
+                    font-size: 38px;
+                    font-weight: 600;
+                    line-height: 40px;
+                }
+                
+
+                li{
+                    list-style: none;
+                    line-height: 24px;
+                    font-weight: 400;
+                    color: var(--secondaryColor);
+                    font-size: 24px;
+                    padding-block: 5px;
+                }
+            }
+
+            .content::before{
+                content: "";
+                width: 3px;
+                height: 100%;
+                background: var(--background);
+                position: absolute;
+                top: 0;
+                left: -10px;
+            }
+        }
+    }
+
+    // ******** section 3: urgent care facilities *********
+    .facilities{
+        width: 100%;
+        .inner-container{
+            width: 100%;
+            .intro{
+                max-width: 80%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-inline: auto;
+
+                h2{
+                    color: var(--primary_color);
+                    line-height: 56px;
+                }
+                p{
+                    text-align: center;
+                    line-height: 24px;
+                    color: #656464;
+                }
+            }
+
+
+            .faciliries-cards{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 15px;
+                padding: 30px; 
+                
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    
+                    img{
+                        width: 100%;
+                        height: 170px;                
+                    }
+                    h3{
+                        
+                        font-weight: 500;
+                        line-height: 24px;
+                    }
+                    span{
+                        color: #717171;
+                    }
+                    .btn{
+                        width: fit-content;
+                        padding: 8px 32px;
+                        border: var(--primary_color);
+                        color: var(--primary_color);
+                        border: 1px solid var(--primary_color);
+                        border-radius: 8px;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }        
+            }
+        }
+    }
+
+    // section 4 styles:  Know where to go
+
+    .sectors{
+        width: 100%;
+        padding-block: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        .intro{
+            width: 80%;
+            margin-inline: auto;
+            text-align: center;
+
+            h2{
+                font-size: 3rem;
+                font-weight: 500;
+                color: var(--primary_color);
+                line-height: 56px;
+            }
+            p{
+                text-align: center;
+                line-height: 24px;
+                color: #656464;
+            }
+        }
+
+        .sectors-box{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+
+            .sector{
+                p{
+                    margin-block: 20px;
+                }
+                p:nth-child(2){
+                    color: #717171;                    
+                }
+                p:nth-child(3){
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 32px; 
+                }
+                .time{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    .time-block{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        h4{
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 32px;                            
+                        }
+                        span{
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            color: #717171;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // section 5 starts: testmonials
+
+    .testmonials{
+        width: 100%;
+        padding-block: 50px;
+        background: var(--background);
+        color: white;
+
+        p{
+            line-height: 28px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .contents{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            
+            .testmonies{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+
+                .testmony-card{
+                    display: grid;
+                    grid-template-columns: 1fr 11fr;
+                    gap: 24px;
+
+                    
+                    span{
+                        font-size: 14px; 
+                    }
+                }
+
+            }
+
+            .outer-card{
+                align-self: flex-start;
+                max-width: 50%;
+                width: 100%;
+                gap: 24px;
+                display: grid;
+                grid-template-columns: 1fr 11fr;               
+            }
+        }
+    }
+
+    // section 6 starts: Insurance -urgent-care
+
+    .insurence{
+        padding-block: 40px;
+
+        .contents{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            img{
+                width: 50%;
+            }
+            .content{
+
+                h2{
+                    margin-bottom: 20px;
+                    color: var(--primary_color);
+                }
+            }
+        }
+    }
+
+
+
+
+
+    // ************************************************************************************************
+    // *********************************************** on mobile **************************************
+
+    @media only screen and (max-width: 768px){
+        // ***************************************HOME PAGE STYLES **************************************
+        .headersection{
+            
+            .primary-header{
+            // position: relative;
+            .contacts{
+                ul{
+                    display: none;
+                }
+                .menu_bar{
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+
+            nav{
+                position: absolute;
+                height: auto;
+                padding-block: 20px;
+                transition: .5s;
+
+                ul{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    li{
+                        a{
+                            transition: .5s;
+                        }
+                        a:hover{
+                            margin-left: 20px;
+                            color: #cdcbcb;
+                        }
+                    }
+                }
+
+            }
+        }
+        
+        .hero-contents{
+            .btns{
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    }
+
+        // services section styles
+
+.services{
+    .servces-contents{
+        h2{
+            color: #ED215E;
+            font-size: 32px;    
+        }
+        .urgent-care{
+            flex-direction: column;
+            gap: 30px;
+
+            img{
+                max-width: 100%;
+            }
+
+            .contents{
+                h3{
+                    font-size: 32px;
+                }
+                p:nth-child(3){
+                    color: black;
+                    position: relative;
+                }
+                p:nth-child(3)::before{
+                    content: "";
+                    width: 3px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    background-color: #ED215E;
+                    
+                }
+            }
+            
+        }
+
+    }
+
+    .Primary-care{
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+
+        img{
+            max-width: 100%;
+        }
+
+        .contents{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h3{
+                font-size: 40px;
+                font-weight: 400;
+                line-height: 48px;
+            }
+            svg{
+                width: 60px !important;
+                height: 60px !important;
+            }
+        }
+    }
+   
+    .Occupational{
+        flex-direction: column-reverse;
+        align-items: unset;
+        gap: 30px;
+
+        img{
+            max-width: 100%;
+        }
+
+        .contents{
+            margin-left: 0;
+
+            .intro{    
+                h3{
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+
+// our-facilities section styles starts here
+
+.home-facilities{
+    padding-block: 0;
+    padding-bottom: 30px;
+
+    .contents{
+        gap: 20px;
+
+        h2{
+            font-size: 40px;
+        }
+        .cards{
+            grid-template-columns: 1fr;
+            
+        }
+
+    }
+}
+// testmonials section
+
+.testmonials{
+    h2{
+        font-size: 32px;
+    }
+    .inner-container{
+        .testmonies{
+            flex-direction: column;
+
+            .testmony{
+                p{
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+                img{
+                    width: 40px;
+                    height: 43px;
+                    align-self: flex-start;
+                
+
+                }
+            }
+
+        }
+        .testmony-outer{
+            width: 100%;
+            img{
+                width: 40px;
+                height: 43px;
+               
+            }
+        }
+    }
+}
+
+// partners section starts
+
+.partners{
+    .inner-container{
+        flex-direction: column;
+        align-items: flex-start;        
+        justify-content: unset;
+        justify-content: center;
+        gap: 20px;
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        a{
+            text-decoration: none;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #ED215E;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+  
+        }
+        
+
+    }
+}
+
+
+
+
+
+
+        // ******************* hero styles are general for PRIMARY CARE PAGE & TEAM PAGE **************
+       .hero{
+          
+            nav{     
+
+                ul{
+                    position: absolute;
+                    top: 70px;
+                    right: 0;
+                    width: 100%;
+                    flex-direction: column;
+                    overflow-y: hidden;
+                    transition: .5s ease-in-out;
+                    background-color: rgb(245, 241, 241);
+                    border-bottom-left-radius: 25%;
+                    box-shadow: 0 2px 3px #ED215E;        
+                }
+                .menu_bar{
+                    display: block;
+                }
+            }
+            // hero contents starts
+        
+            .contents{        
+                .block-content1{
+                    .imgs{
+                        flex-direction: column;
+
+                    }
+                    p{
+                        margin-block: 20px;
+                    }
+                }
+                .heroBtns{
+                    flex-direction: column;
+                }
+            }
+        }
+
+
+
+        // PRIMARY-CARE PAGE: facilities section styles starts here
+
+.our-facilities{
+    grid-template-columns: 1fr;
+
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding-inline: 25px;
+    }
+    .cards{
+        grid-template-columns: 1fr;
+    }
+}
+   // services section styles 
+
+   .services{
+    padding-block: 80px;
+    .servicesList{
+
+        .cards{
+            grid-template-columns: 1fr;
+
+        }
+    }
+}    
+
+    // insurence section styles
+
+    .insurence{
+        .contents{
+            flex-direction: column;
+            align-items: unset;
+            gap: 20px;
+        }
+    }
+// partners section starts
+    .partners{
+        padding-block: 30px;
+
+        .contents{
+            gap: 20px;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .texts{
+                h2{
+                    font-size: 2.5em;
+                }
+                p{
+                    font-size: 18px;
+                    margin-top: 5px;
+
+                }
+            }
+        }
+    }
+ // ******************* footer styles are general for PRIMARY CARE PAGE & TEAM PAGE **************
+      // footer section starts
+      footer{
+        .contents{
+
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+
+            .holderCards{
+                display: grid;
+                grid-template-columns: 1fr;  
+                gap: 20px;   
+                
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    ul li{
+                        list-style: none;
+                        color: var(--secondaryColor);
+                        padding-block: 5px;
+
+                        a{
+                            text-decoration: none;
+                            color: var(--secondaryColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // ************************** URGENT PAGE RESPONSIVENESS ********************************
+
+    .visit-us{
+        h2{
+            color: var(--primary_color);
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 56px;
+
+        }
+
+        .content-box{
+            flex-direction: column-reverse;
+            align-items: unset;   
+            gap: 20px;                   
+
+            img{
+                width: 100%;
+                border-radius: 0 88px 0 88px;
+            }           
+            
+            .content{
+                margin-left: 0;
+                width: 100%;
+
+                h3{
+                    font-size: 26px;
+                    font-weight: 600;
+                    line-height: 40px;
+                }
+                
+
+                li{
+                    line-height: 20px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+
+    // ******** section 3: urgent care facilities *********
+    .facilities{
+        .inner-container{
+            width: 100%;
+            .intro{
+                max-width: 100%;
+                margin-inline: 0;
+                h2{
+                    color: var(--primary_color);
+                    line-height: 56px;
+                }
+                p{
+                    line-height: 24px;
+                    color: #656464;
+                }
+            }
+
+
+            .faciliries-cards{
+                grid-template-columns: 1fr;
+
+                .card{
+                    img{
+                        height: auto;
+                    }
+                }
+   
+            }
+        }
+    }
+
+
+      // section 4 styles:  Know where to go
+
+      .sectors{
+        .intro{
+            width: 100%;            
+            padding-block: 8%;
+
+            h2{
+                font-size: 2rem;
+            }
+        }
+
+        .sectors-box{
+            grid-template-columns: 1fr;
+
+        }
+    }
+
+     // section 5 starts: testmonials
+
+     .testmonials{
+        svg{
+            width: 30px;
+            height: 30px;
+        } 
+        .contents{            
+            .testmonies{
+                grid-template-columns: 1fr;
+                gap: 20px;
+
+            }
+
+            .outer-card{
+                max-width: 100%;
+                gap: 15px;              
+            }
+        }
+    }
+
+    // section 6 starts: Insurance -urgent-care
+
+    .insurence{
+        padding-block: 40px;
+
+        .contents{
+            align-items: unset;
+            gap: 30px;
+          
+
+            img{
+                width: 100%;
+            }
+            .content{
+
+                h2{
+                    margin-bottom: 20px;
+                    color: var(--primary_color);
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+    }

@@ -1,0 +1,927 @@
+
+// ********** these css codes are for team page, career page, and occupational page
+// ********** they all share the same styles for navigation bar and footer
+
+@import url(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+:root{
+    --background: #ED215E;
+    --primary_color: #ED215E;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    padding-inline: 8%;
+}
+
+.hero,.our-facilities,.services,.insurence,.partners{
+    width: 100%;
+}
+.nav-active{
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.416);
+    background: rgb(1, 1, 171);
+    transition: .5s ease-in-out;
+}
+
+// header section starts
+.hero{
+    padding-inline: 0;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url(../imgs/team-imgs/team.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    nav{
+        padding-inline: 8%;
+        z-index: 999;
+        position: fixed;
+        width: inherit;
+        max-width: inherit;
+        align-self: flex-start;
+        margin-top: 0;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            li{
+                list-style: none;
+
+                a{
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: #fff; 
+                    transition: .5s;                   
+                }
+                a:hover{
+                    color: var(--primary_color);
+                }
+            }
+
+        }
+        .menu_bar{
+            display: none;
+            cursor: pointer;
+        }
+    }
+
+    // hero contents starts
+
+    .contents{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .block-content{
+          
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                color: #fff;
+                text-align: center;
+
+                h2{
+                    font-size: 40px;
+                }
+         
+            p{
+                margin-block: 20px;
+            }
+        }
+            button{
+                padding: 10px 25px;
+                border-radius: 8px;
+                border: none;
+            }
+            .submitResume{
+                padding: 15px 25px;
+                transition: all .5s;
+            }
+            .submitResume:hover{
+                padding-inline: 30px;
+                font-size: 16px;
+            }
+ 
+            .btn{
+                color: white;
+                background-color: var(--background);
+            }
+            .hero-cta{
+                width: 400px;
+                position: absolute;
+                left: 8%;
+                bottom: 30px;
+                background: white;
+                padding: 10px;
+                p{
+                    color: #595959;
+                    line-height: 24px;
+                    font-weight: 500;
+                }
+            }
+            
+    }
+}
+
+// team section starts
+.team{
+    width: 100%;
+    .medicalPersonel{
+        width: 100%;
+        padding-block: 40px;
+
+        h2{
+
+            text-align: center;
+            font-size: 40px;
+            color: var(--primary_color);
+            margin-bottom: 20px;
+        }
+
+        .cards{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+
+            .card{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }          
+            img{
+                
+                height: 250px;
+            }
+            h4{
+                color: var(--primary_color);
+            }
+        }
+    }
+    .doctors{
+        width: 100%;
+        padding-block: 40px;
+
+        h2{
+
+            text-align: center;
+            font-size: 40px;
+            color: var(--primary_color);
+            margin-bottom: 20px;
+        }
+
+        .cards{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+
+            .card{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }  
+            
+            .card4{
+                position: relative;
+                background: #ed215ea4;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+                .content{
+                    position: absolute;
+                    top: 45%;
+                    color: white;
+                    padding-inline: 10px;
+
+
+                .btns{
+                    display: flex;
+                    gap: 10px;
+                
+                    button{
+                        padding: 10px 15px;
+                        color: var(--primary_color);
+                        border: none;
+                        border-radius: 8px;
+                        margin-top: 10px;
+
+                    }
+                    .in{
+                        font-weight: 700;
+                    }
+
+                }
+                }
+            }
+               
+            img{
+                
+                height: 250px;
+            }
+            h4{
+                color: var(--primary_color);
+            }
+        }
+    }
+}
+
+ // footer section starts
+ footer{
+    padding-block: 30px;
+    .contents{
+
+        display: grid;
+        grid-template-columns: 4fr 8fr;
+        gap: 30px;
+
+        .card1{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            img{
+                width: 216px;
+                height: 60px;
+            }
+
+            p{
+                color: #969696;
+            }
+        }
+
+        .holderCards{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);  
+            gap: 20px;   
+            
+            .card{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                ul li{
+                    list-style: none;
+                    color: #969696;
+                    padding-block: 5px;
+
+                    a{
+                        text-decoration: none;
+                        color: #969696;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ******************************** new page: career page styles starts here********************************
+.career-hero-sec{
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url(../imgs/career-imgs/bg-img.jpeg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; 
+
+    .contents{
+        .block-content{
+            a{
+                padding: 10px 25px;
+                text-decoration: none;
+                background: var(--background);
+                border: none;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: white;
+                transition: .5s ease;  
+            }
+        }
+    }
+
+}
+
+.jobs_avail{
+    width: 100%;
+    padding-block: 30px;
+    .jobs{
+        h2{
+            margin-bottom: 20px;
+        }
+        .position{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 8fr 4fr;
+            align-items: center;
+            padding-block: 20px;
+            background: #dddddd9c;
+            padding: 15px;
+
+            p{
+                margin-block: 20px;
+                color: #969696;
+            }
+
+            a{
+                width: fit-content;
+                justify-self: end;
+                text-decoration: none;
+                color: var(--primary_color);
+            }
+            a{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            a:hover{
+                color: rgb(6, 203, 6);
+            }
+            .contacts{
+                font-weight: 500;
+                font-size: 14px;
+                a{  display: inline-block;
+                    color: black;
+                }
+            }
+
+
+        }
+    }
+}
+.cta{
+    padding-block: 30px;
+    width: 100%;
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        h2{
+            color: var(--primary_color);
+            font-size: 2.8rem;
+        }
+        a{
+            padding: 10px 25px;
+            text-decoration: none;
+            border: 1px solid var(--primary_color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary_color);
+
+        }
+
+
+    }
+}
+
+
+    // ********************** new page starts here: occupational page *************************************
+    //  hero section starts
+    .occupational_medecine{
+        .contents{
+            .block-content{
+                a{  
+                    padding: 10px 25px;
+                    text-decoration: none;
+                    background: var(--background);
+                    border: none;
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color: white;
+                    transition: .5s ease;
+                }     
+                a:hover{
+                   transform: scaleX(1.2);
+                }             
+            }
+        }
+    }
+
+    // promises section starts: section 2
+
+    .promises{
+        padding-block: 50px;
+        padding-inline: 0;
+        .contents{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+
+            .intro{
+                h2{
+                    color: var(--primary_color);
+                    margin-bottom: 15px;
+                }
+            }
+            p{
+                font-size: 1.1em;
+            }
+
+            .promisesBlocks{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+
+                .block{
+                    padding: 5px;
+                    display: flex;
+                    gap: 15px;
+
+                    svg{
+                        width: 50px;
+                        height: 50px;
+                    }
+                    h3{
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: #0B1B35;
+                    }
+                    p{
+                        margin-block: 10px;
+                        color: #969696;
+                    }
+                }
+               
+                
+            }
+
+
+        }
+    }
+
+    // section 3 styles starts: our focus 
+    .our_focus{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .descriptions{
+            padding: 30px;
+            background-color: #FFF7F9;
+            color: #706A6A;
+            h2{
+                color: var(--primary_color);
+                line-height: 26px;
+                margin-bottom: 5px;
+            }
+        }
+        
+
+
+        .focus-lists{
+            display: flex;
+            gap: 25px;
+            padding-block: 30px;
+            justify-content: end;
+
+            ul{
+                li{
+                    list-style-image: url("../imgs/occupational-imgs/Ellipse\ 94.png");
+                    padding-block: 3px;
+                    
+                }
+            }
+        }
+
+    }
+
+    // section 4 styles: our form 
+
+    .our-form{
+        padding-block: 30px;
+        .contents{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            h2{
+                color: var(--primary_color);
+                font-size: 2.5em;
+            }
+            
+
+            
+
+            button{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 10px 15px;
+                color: var(--primary_color);
+                border: 1px solid var(--primary_color);
+                border-radius: 8px;
+                margin-top: 10px;                
+            }
+
+
+
+        }
+    }
+
+
+    // ************************FORM PAGE Styles******************
+
+    .contact-form{
+        width: 100%;
+        padding-block: 40px;
+        display: grid;
+        gap: 40px;
+        
+
+        .intro{
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            gap: 10px;
+        }
+
+        .form{
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            gap: 40px;
+
+            .content{
+                display: grid;
+                background: rgba(255, 192, 203, 0.4);
+                padding: 15px 20px;
+                gap: 10px;
+                .box{
+                    width: 120px;
+                    height: 120px;
+                    background: white;
+                    border-radius: 12px;
+                }
+
+            }
+
+
+            .spanCols{
+                grid-column: span 2;
+            }
+
+            form{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px 10px;
+        
+
+                img{
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    left: 4px;
+                    top: 3pxs;
+                    transform: translate(0,50%);
+                }
+                .input-grp{
+                    position: relative;
+                    input{
+                        width: 100%;
+                        height: 30px;
+                        font-size: 14px;
+                        padding-left: 20px;
+                    }
+                    .space{
+                        margin-right: 3;
+                    }
+                    textarea{
+                        padding-inline: 20px;
+                        padding-block: 5px;
+                        
+                        width: 100%;
+                        resize: none;
+    
+                    }
+                    button{
+                        width: 100%;
+                        font-size: 18px;
+                        font-weight: 500;
+                        background-color: var(--background);
+                        padding-block: 10px;
+                        border: none;
+                        border-radius: 8px;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+
+
+// ************************************************************************************************
+// *********************************on mobile******************************************************
+
+@media only screen and (max-width: 768px){
+    .hero{
+          
+        nav{   
+            .logo{
+                width: 60px;
+            } 
+            ul{
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 100%;
+                flex-direction: column;
+                overflow-y: hidden;
+                transition: .5s ease-in-out;
+                background-color: rgb(245, 241, 241);
+                border-bottom-left-radius: 25%;
+                box-shadow: 0 2px 3px #9a9496;   
+                li{
+                    a{
+                        color: black;
+                    }
+                }     
+            }
+            .menu_bar{
+                display: block;
+                border: 1px solid rgb(165, 165, 165);
+                border-radius: 50%;
+                padding: 2px;
+            }
+        }
+        // hero contents starts
+    
+        .contents{        
+            .block-content1{
+                .imgs{
+                    flex-direction: column;
+
+                }
+                p{
+                    margin-block: 20px;
+                }
+            }
+            .heroBtns{
+                flex-direction: column;
+            }
+        }
+    }
+
+    // team styles
+
+    .team{
+        .medicalPersonel{
+
+            .cards{
+                grid-template-columns: 1fr;             
+                img{
+                    height: auto;
+                }
+            }
+        }
+        .doctors{    
+            .cards{
+                grid-template-columns: 1fr;
+                                       
+                img{
+                    
+                    height: auto;
+                }
+            }
+        }
+    }
+
+       // footer section starts
+       footer{
+        .contents{
+
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+
+            .holderCards{
+                display: grid;
+                grid-template-columns: 1fr;  
+                gap: 20px;   
+                
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    ul li{
+                        list-style: none;
+                        color: #969696;
+                        padding-block: 5px;
+
+                        a{
+                            text-decoration: none;
+                            color: #969696;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+
+    // ******************************** new page: career page responsiveness styles starts here********************************
+    
+    .jobs_avail{
+        .jobs{
+            h2{
+                margin-bottom: 15px;
+                color: #ED215E;
+            }
+    
+            .position1{
+                border-bottom: 2px solid #9696968e;
+            }
+            .position{
+                grid-template-columns: 1fr;
+                gap: 25px;
+
+                h3{
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+    
+                p{
+                    margin-block: 20px;
+                    color: #969696;
+                }
+    
+                a{
+                    justify-self: unset;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+                .contacts{
+                    font-weight: 500;
+                    font-size: 14px;
+                    a{  display: inline-block;
+                        color: black;
+                    }
+                }
+    
+    
+            }
+        }
+    }
+    .cta{
+        .content{
+    
+            h2{
+                color: var(--primary_color);
+                font-size: 2rem;
+                text-align: center;
+            }
+            a{
+                padding: 8px 20px;    
+            }
+    
+    
+        }
+    }
+
+    // ********************************new page responsiveness: occupational-medecine*****************
+
+    // promises section starts: section 2
+
+    .promises{
+        padding-block: 20px;
+        .contents{
+            .promisesBlocks{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    // section 3 styles starts: our focus 
+        
+        .our_focus{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+    
+            .descriptions{
+                padding: unset;
+                padding-block: 20px;
+                background-color: #FFF7F9;
+                
+            }
+            
+    
+    
+            .focus-lists{
+                flex-direction: column;
+                gap: 0px;
+                justify-content: unset;
+                
+    
+                ul{
+                    li{
+                        list-style-image: url("../imgs/occupational-imgs/Ellipse\ 94.png");
+                        padding-block: 4px;
+                        font-size: 18px;
+                        line-height: 24px;
+                        font-weight: 400;
+                        
+                    }
+                }
+            }
+    
+        }
+
+    // section 4 styles: our form 
+
+    .our-form{
+        padding-block: 20px;
+        .contents{
+            text-align: center;
+            p{
+                line-height: 25px;
+            }
+
+            h2{
+                color: var(--primary_color);
+                font-size: 2.5em;
+            }
+        }
+    }
+
+    
+    // ************************FORM PAGE Styles******************
+    .hero-cta{
+        display: none;
+
+    }
+
+    .contact-form{
+        .intro{
+            grid-template-columns: 1fr;            
+        }
+
+        .form{
+            grid-template-columns: 1fr;
+    
+            .content{
+                gap: 10px;
+            }
+            form{
+                grid-template-columns: 1fr;
+
+                .spanCols{
+                    grid-column: span 1;
+                }
+
+
+            }
+        }
+    }
+
+
+
+}
+

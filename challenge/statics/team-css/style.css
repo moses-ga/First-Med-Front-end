@@ -1,0 +1,706 @@
+@import url(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --background: #ED215E;
+  --primary_color: #ED215E;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  padding-inline: 8%;
+}
+
+.hero, .our-facilities, .services, .insurence, .partners {
+  width: 100%;
+}
+
+.nav-active {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.416);
+  background: rgb(1, 1, 171);
+  transition: 0.5s ease-in-out;
+}
+
+.hero {
+  padding-inline: 0;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imgs/team-imgs/team.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.hero nav {
+  padding-inline: 8%;
+  z-index: 999;
+  position: fixed;
+  width: inherit;
+  max-width: inherit;
+  align-self: flex-start;
+  margin-top: 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.hero nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.hero nav ul li {
+  list-style: none;
+}
+.hero nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  transition: 0.5s;
+}
+.hero nav ul li a:hover {
+  color: var(--primary_color);
+}
+.hero nav .menu_bar {
+  display: none;
+  cursor: pointer;
+}
+.hero .contents {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero .contents .block-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+}
+.hero .contents .block-content h2 {
+  font-size: 40px;
+}
+.hero .contents .block-content p {
+  margin-block: 20px;
+}
+.hero .contents button {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+}
+.hero .contents .submitResume {
+  padding: 15px 25px;
+  transition: all 0.5s;
+}
+.hero .contents .submitResume:hover {
+  padding-inline: 30px;
+  font-size: 16px;
+}
+.hero .contents .btn {
+  color: white;
+  background-color: var(--background);
+}
+.hero .contents .hero-cta {
+  width: 400px;
+  position: absolute;
+  left: 8%;
+  bottom: 30px;
+  background: white;
+  padding: 10px;
+}
+.hero .contents .hero-cta p {
+  color: #595959;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.team {
+  width: 100%;
+}
+.team .medicalPersonel {
+  width: 100%;
+  padding-block: 40px;
+}
+.team .medicalPersonel h2 {
+  text-align: center;
+  font-size: 40px;
+  color: var(--primary_color);
+  margin-bottom: 20px;
+}
+.team .medicalPersonel .cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.team .medicalPersonel .cards .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.team .medicalPersonel .cards img {
+  height: 250px;
+}
+.team .medicalPersonel .cards h4 {
+  color: var(--primary_color);
+}
+.team .doctors {
+  width: 100%;
+  padding-block: 40px;
+}
+.team .doctors h2 {
+  text-align: center;
+  font-size: 40px;
+  color: var(--primary_color);
+  margin-bottom: 20px;
+}
+.team .doctors .cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.team .doctors .cards .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.team .doctors .cards .card4 {
+  position: relative;
+  background: rgba(237, 33, 94, 0.6431372549);
+}
+.team .doctors .cards .card4 img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.team .doctors .cards .card4 .content {
+  position: absolute;
+  top: 45%;
+  color: white;
+  padding-inline: 10px;
+}
+.team .doctors .cards .card4 .content .btns {
+  display: flex;
+  gap: 10px;
+}
+.team .doctors .cards .card4 .content .btns button {
+  padding: 10px 15px;
+  color: var(--primary_color);
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.team .doctors .cards .card4 .content .btns .in {
+  font-weight: 700;
+}
+.team .doctors .cards img {
+  height: 250px;
+}
+.team .doctors .cards h4 {
+  color: var(--primary_color);
+}
+
+footer {
+  padding-block: 30px;
+}
+footer .contents {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 30px;
+}
+footer .contents .card1 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .contents .card1 img {
+  width: 216px;
+  height: 60px;
+}
+footer .contents .card1 p {
+  color: #969696;
+}
+footer .contents .holderCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+footer .contents .holderCards .card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .contents .holderCards .card ul li {
+  list-style: none;
+  color: #969696;
+  padding-block: 5px;
+}
+footer .contents .holderCards .card ul li a {
+  text-decoration: none;
+  color: #969696;
+}
+
+.career-hero-sec {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imgs/career-imgs/bg-img.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.career-hero-sec .contents .block-content a {
+  padding: 10px 25px;
+  text-decoration: none;
+  background: var(--background);
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  transition: 0.5s ease;
+}
+
+.jobs_avail {
+  width: 100%;
+  padding-block: 30px;
+}
+.jobs_avail .jobs h2 {
+  margin-bottom: 20px;
+}
+.jobs_avail .jobs .position {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  align-items: center;
+  padding-block: 20px;
+  background: rgba(221, 221, 221, 0.6117647059);
+  padding: 15px;
+}
+.jobs_avail .jobs .position p {
+  margin-block: 20px;
+  color: #969696;
+}
+.jobs_avail .jobs .position a {
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-self: end;
+  text-decoration: none;
+  color: var(--primary_color);
+}
+.jobs_avail .jobs .position a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.jobs_avail .jobs .position a:hover {
+  color: rgb(6, 203, 6);
+}
+.jobs_avail .jobs .position .contacts {
+  font-weight: 500;
+  font-size: 14px;
+}
+.jobs_avail .jobs .position .contacts a {
+  display: inline-block;
+  color: black;
+}
+
+.cta {
+  padding-block: 30px;
+  width: 100%;
+}
+.cta .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.cta .content h2 {
+  color: var(--primary_color);
+  font-size: 2.8rem;
+}
+.cta .content a {
+  padding: 10px 25px;
+  text-decoration: none;
+  border: 1px solid var(--primary_color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary_color);
+}
+
+.occupational_medecine .contents .block-content a {
+  padding: 10px 25px;
+  text-decoration: none;
+  background: var(--background);
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  transition: 0.5s ease;
+}
+.occupational_medecine .contents .block-content a:hover {
+  transform: scaleX(1.2);
+}
+
+.promises {
+  padding-block: 50px;
+  padding-inline: 0;
+}
+.promises .contents {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.promises .contents .intro h2 {
+  color: var(--primary_color);
+  margin-bottom: 15px;
+}
+.promises .contents p {
+  font-size: 1.1em;
+}
+.promises .contents .promisesBlocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.promises .contents .promisesBlocks .block {
+  padding: 5px;
+  display: flex;
+  gap: 15px;
+}
+.promises .contents .promisesBlocks .block svg {
+  width: 50px;
+  height: 50px;
+}
+.promises .contents .promisesBlocks .block h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0B1B35;
+}
+.promises .contents .promisesBlocks .block p {
+  margin-block: 10px;
+  color: #969696;
+}
+
+.our_focus {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.our_focus .descriptions {
+  padding: 30px;
+  background-color: #FFF7F9;
+  color: #706A6A;
+}
+.our_focus .descriptions h2 {
+  color: var(--primary_color);
+  line-height: 26px;
+  margin-bottom: 5px;
+}
+.our_focus .focus-lists {
+  display: flex;
+  gap: 25px;
+  padding-block: 30px;
+  justify-content: end;
+}
+.our_focus .focus-lists ul li {
+  list-style-image: url("../imgs/occupational-imgs/Ellipse 94.png");
+  padding-block: 3px;
+}
+
+.our-form {
+  padding-block: 30px;
+}
+.our-form .contents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.our-form .contents h2 {
+  color: var(--primary_color);
+  font-size: 2.5em;
+}
+.our-form .contents button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px;
+  color: var(--primary_color);
+  border: 1px solid var(--primary_color);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.contact-form {
+  width: 100%;
+  padding-block: 40px;
+  display: grid;
+  gap: 40px;
+}
+.contact-form .intro {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 10px;
+}
+.contact-form .form {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 40px;
+}
+.contact-form .form .content {
+  display: grid;
+  background: rgba(255, 192, 203, 0.4);
+  padding: 15px 20px;
+  gap: 10px;
+}
+.contact-form .form .content .box {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 12px;
+}
+.contact-form .form .spanCols {
+  grid-column: span 2;
+}
+.contact-form .form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 10px;
+}
+.contact-form .form form img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 4px;
+  top: 3pxs;
+  transform: translate(0, 50%);
+}
+.contact-form .form form .input-grp {
+  position: relative;
+}
+.contact-form .form form .input-grp input {
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.contact-form .form form .input-grp .space {
+  margin-right: 3;
+}
+.contact-form .form form .input-grp textarea {
+  padding-inline: 20px;
+  padding-block: 5px;
+  width: 100%;
+  resize: none;
+}
+.contact-form .form form .input-grp button {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: var(--background);
+  padding-block: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero nav .logo {
+    width: 60px;
+  }
+  .hero nav ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    overflow-y: hidden;
+    transition: 0.5s ease-in-out;
+    background-color: rgb(245, 241, 241);
+    border-bottom-left-radius: 25%;
+    box-shadow: 0 2px 3px #9a9496;
+  }
+  .hero nav ul li a {
+    color: black;
+  }
+  .hero nav .menu_bar {
+    display: block;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 50%;
+    padding: 2px;
+  }
+  .hero .contents .block-content1 .imgs {
+    flex-direction: column;
+  }
+  .hero .contents .block-content1 p {
+    margin-block: 20px;
+  }
+  .hero .contents .heroBtns {
+    flex-direction: column;
+  }
+  .team .medicalPersonel .cards {
+    grid-template-columns: 1fr;
+  }
+  .team .medicalPersonel .cards img {
+    height: auto;
+  }
+  .team .doctors .cards {
+    grid-template-columns: 1fr;
+  }
+  .team .doctors .cards img {
+    height: auto;
+  }
+  footer .contents {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  footer .contents .holderCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  footer .contents .holderCards .card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  footer .contents .holderCards .card ul li {
+    list-style: none;
+    color: #969696;
+    padding-block: 5px;
+  }
+  footer .contents .holderCards .card ul li a {
+    text-decoration: none;
+    color: #969696;
+  }
+  .jobs_avail .jobs h2 {
+    margin-bottom: 15px;
+    color: #ED215E;
+  }
+  .jobs_avail .jobs .position1 {
+    border-bottom: 2px solid rgba(150, 150, 150, 0.5568627451);
+  }
+  .jobs_avail .jobs .position {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .jobs_avail .jobs .position h3 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .jobs_avail .jobs .position p {
+    margin-block: 20px;
+    color: #969696;
+  }
+  .jobs_avail .jobs .position a {
+    justify-self: unset;
+  }
+  .jobs_avail .jobs .position a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .jobs_avail .jobs .position .contacts {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .jobs_avail .jobs .position .contacts a {
+    display: inline-block;
+    color: black;
+  }
+  .cta .content h2 {
+    color: var(--primary_color);
+    font-size: 2rem;
+    text-align: center;
+  }
+  .cta .content a {
+    padding: 8px 20px;
+  }
+  .promises {
+    padding-block: 20px;
+  }
+  .promises .contents .promisesBlocks {
+    grid-template-columns: 1fr;
+  }
+  .our_focus {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .our_focus .descriptions {
+    padding: unset;
+    padding-block: 20px;
+    background-color: #FFF7F9;
+  }
+  .our_focus .focus-lists {
+    flex-direction: column;
+    gap: 0px;
+    justify-content: unset;
+  }
+  .our_focus .focus-lists ul li {
+    list-style-image: url("../imgs/occupational-imgs/Ellipse 94.png");
+    padding-block: 4px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .our-form {
+    padding-block: 20px;
+  }
+  .our-form .contents {
+    text-align: center;
+  }
+  .our-form .contents p {
+    line-height: 25px;
+  }
+  .our-form .contents h2 {
+    color: var(--primary_color);
+    font-size: 2.5em;
+  }
+  .hero-cta {
+    display: none;
+  }
+  .contact-form .intro {
+    grid-template-columns: 1fr;
+  }
+  .contact-form .form {
+    grid-template-columns: 1fr;
+  }
+  .contact-form .form .content {
+    gap: 10px;
+  }
+  .contact-form .form form {
+    grid-template-columns: 1fr;
+  }
+  .contact-form .form form .spanCols {
+    grid-column: span 1;
+  }
+}/*# sourceMappingURL=style.css.map */
