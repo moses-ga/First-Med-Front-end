@@ -74,10 +74,10 @@
                 </p>
             </div>
             <form action="">
-                <div class="input-grp"><img src="../statics/imgs/user.png" alt="" srcset=""><input type="text" placeholder="Full name" class="fname space" autocomplete="additional-name"></div>
-                <div class="input-grp"><img src="../statics/imgs/email.png" alt="" srcset=""><input type="email" placeholder="Email" class="sname"></div>
-                <div class="input-grp"><img src="../statics/imgs/phone.png" alt="" srcset=""><input type="text" placeholder="Phone Number" class="input3 space"></div>
-                <div class="input-grp"><img src="../statics/imgs/reason.png" alt="" srcset=""><input type="text" placeholder="Reason for Contacting" class="input3"></div>
+                <div class="input-grp"><img src="../statics/imgs/user.png" alt="" srcset=""><input type="text" placeholder="Full name" class="fname space" autocomplete="additional-name" pattern="[A-Za-z]+" title="Only latters are allowed" required></div>
+                <div class="input-grp"><img src="../statics/imgs/email.png" alt="" srcset=""><input type="email" placeholder="Email" class="sname" required></div>
+                <div class="input-grp"><img src="../statics/imgs/phone.png" alt="" srcset=""><input type="text" placeholder="Phone Number" class="input3 space" pattern="[0-9]{10}" required></div>
+                <div class="input-grp"><img src="../statics/imgs/reason.png" alt="" srcset=""><input type="text" placeholder="Reason for Contacting" class="input3" required></div>
                 <div class="input-grp spanCols"><img src="../statics/imgs/msg.png" alt="" srcset=""><textarea name="text" id="textarea" cols="30" rows="10" placeholder="Personalized Message" style="resize: none;"></textarea></div>
                 <div class="input-grp spanCols"><button type="submit" name="submit">Send Message</button></div>
             </form>
